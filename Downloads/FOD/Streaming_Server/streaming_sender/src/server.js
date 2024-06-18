@@ -10,6 +10,7 @@ app.use('/public', express.static(__dirname + '/public'));
 app.get('/', (_, res) => res.render('listener'));
 app.get('/sender', (_, res) => res.render('sender'));
 app.get('/listener', (_, res) => res.render('listener'));
+app.get('/listener_rotate', (_, res) => res.render('listener_rotate'));
 app.get('/*', (_, res) => res.redirect('/'));
 
 const httpServer = http.createServer(app);
